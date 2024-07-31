@@ -19,4 +19,5 @@ users = Table(
     Column("username", String, nullable=False),
     Column("password", String, nullable=False),
     Column("registred_at", TIMESTAMP, default=datetime.now()),
+    Column("role_id", Integer, ForeignKey("roles.id")),
 )
